@@ -1,1 +1,0 @@
-/usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/my_program.dir/src/array/array.cpp.o CMakeFiles/my_program.dir/src/pointer.cpp.o -o my_program
