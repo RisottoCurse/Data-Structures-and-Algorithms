@@ -10,6 +10,46 @@ An ordered set is implemented with a tree. <br>
 
 An unordered set in implemented with a hash table and provides O(1) average lookup and insert time.
 
+### Useful methods 
+
+1. Count
+
+Count searches the container for elements and returns number of matches. Because all elements in a set are unique the function will return 1 if element is found or 0 if it is not.
+
+2. Find
+
+iterator find (const auto& val);
+
+Searches the container for an element equivalent to 'val' and returns an iterator to it if found. If element is not found, it returns an iterator to set::end.
+
+e.g. 
+```
+if (set.find(1) == set.end()) {
+    cout << "1 is not in set";
+}
+```
+3. End
+
+iterator end(); 
+const_iterator end() const;
+
+Returns an iterator to the past-the-end element in the set container.
+
+4. Begin
+
+As we know a set orders data in ascending order but how do we retrieve the value? 
+
+we can use the begin() method but this returns an iterator so to access the element we have to dereference it. 
+
+```
+set<int> temp = {'3', '1', '9', '5'};
+
+auto firstElement = temp.begin()
+
+return *firstElement;
+
+```
+
 
 ## std::map 
 
