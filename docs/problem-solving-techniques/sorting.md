@@ -83,7 +83,7 @@ If the first element is the same value, it will sort according to the second val
 
 ### Complexity
 
-time complexity: O(nlogn) <br>
+time complexity: O(nlog(n)) <br>
 space complexity: O(1)
 
 ## Bucket Sort
