@@ -88,3 +88,13 @@ int main() {
 When we print out the first (key) and second (value) compoment of elem, because we are using map the output is sorted according to the value of the key.
 
 ## std::unordered_map
+
+A unordered map in c++ stores key values similar to std::map but without sorting the key.
+
+the syntax is 
+
+```
+unordered::map<dataTypeKey, dataTypeValue> ump;
+
+ump[key] = value;
+```
