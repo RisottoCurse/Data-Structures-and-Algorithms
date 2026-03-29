@@ -8,6 +8,8 @@ In two pointers we inititials two variables that can either move towards each ot
 
 There exist different types of two pointer techniques which will be explores in more detail below.
 
+The core idea is to define the lefrt and right pointers as indices and not as representing the value in the container data structure.
+
 
 ## Converging Pointers
 
@@ -15,20 +17,20 @@ The pointers will start at both ends of a container and move towards each other.
 ```
 vector<int> twoSum(vector<int>& numbers, int target) {
 
-    int left = 0;
-    int right = numbers.size() - 1;
+    int l = 0;
+    int r = numbers.size() - 1;
 
-    while (left < right) {
-        int sum = numbers[left] + numbers[right];
+    while (l < r) {
+        int sum = numbers[l] + numbers[r];
 
         if (sum < target) {
-            left++;
+            l++;
         }
         else if (sum > target) {
-            right--;
+            r--;
         }
         else {
-            return {left, right}
+            return {l, r}
         }
     }
 
@@ -44,4 +46,12 @@ In this approach the pointers start at the same end and the right will move forw
 
 ## When to use?
 
-It is important to identify problems where two pointers 
+It is important to identify problems where two pointers as it will help solve problems more efficiently and in some cases make it easier than brute force.
+
+Key patterns include: <br>
+1. Working with sorted array
+2. When looking for a pair or combination
+3. When problem involves a range or window
+4. When reducing problem from $O(n^2)$ to $O(n)$
+
+The last one is huge. If you find yourself using a nested for loop you can probably increase efficiency with two pointers. 
