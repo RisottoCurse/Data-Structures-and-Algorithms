@@ -98,3 +98,6 @@ unordered::map<dataTypeKey, dataTypeValue> ump;
 
 ump[key] = value;
 ```
+
+Any experience with c++ informs us that using const in an unordered map results in being unable to modify/insert data into the map. 
+This is why using the '[]' operator is not possible in when the map is const'ed. As an alternate if searching for data is to use .at(key) to search otherwise the map should not be a constant.
